@@ -134,7 +134,10 @@ def flatten(d, parent_key=''):
     # skip scapy internal fields
     skip_fields = ['fieldtype', 'underlayer', 'initialized', 'fieldtype',
                    'default_fields', 'aliastypes', 'post_transforms',
-                   'packetfields', 'overloaded_fields', 'sent_time']
+                   'packetfields', 'overloaded_fields', 'sent_time',
+                   'payload', 'time', 'Raw_payload_fields_load',
+                   'Raw_payload_original', 'Raw_payload_raw_packet_cache',
+                   'raw_packet_cache', 'original' ]
     
     for k, v in d.items():
         fullk = "%s_%s" % (parent_key, k)
